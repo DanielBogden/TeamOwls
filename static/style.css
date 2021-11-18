@@ -1,0 +1,26 @@
+body {
+	background-color: lightgrey;
+}
+
+.container {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+
+.nav ul {
+	text-align:center;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.nav li {
+	display: inline-block;
+	margin-right: 4px;
+}
+
+.nav {
+	margin-bottom: 100px;
+}
+
