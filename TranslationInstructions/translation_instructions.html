@@ -1,0 +1,97 @@
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="./static/style.css"/>
+
+<div class="container">
+	<h1>Team Owls</h1>
+</div>
+
+<div class="container">
+	<h3>Scala Programming Language</h3>
+</div>
+
+
+<div class="nav">
+	<ul>
+		<li><a href="Examples/examples.html">Examples</a></li>
+		<li><a href="DescHist/desc_hist.html">Description and History</a></li>
+
+		<li><a href="LinksManuals/links_manuals.html">Links and Manuals</a></li>
+		<li><a href="TranslationInstructions/translation_instructions.html">Translations and Instructions</a></li>
+		<li><a href="Comparison/comparison.html">Comparison</a></li>
+	</ul>
+</div>
+
+</head>
+<style>
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 20px;
+}
+</style>
+<body>
+<h1>Scala Installation&nbsp;</h1>
+<!--<h1><img style="float: right;" src="images/logo.png" alt="scala logo" /></h1>-->
+<h2>Mac and Linux:</h2>
+<p>1. Start at Scala's website&nbsp;<a href="https://www.scala-lang.org/download/scala3.html" data-gwd-node="true" data-gwd-uuid="ij5a45a2rtb8">here</a></p>
+<p>2. Click on Download Coursier (big red button), or go<a href="https://get-coursier.io/docs/cli-installation" data-gwd-node="true" data-gwd-uuid="i3r8addsy5vn">&nbsp;here</a>.</p>
+<p>3. Type the commands in your terminal from your choice of install package.</p>
+<p>&nbsp; &nbsp; Example, For the native launcher:</p>
+<pre><code>        $ curl -fLo cs https://git.io/coursier-cli-"$(uname | tr LD ld)"
+        $ chmod +x cs
+        $ ./cs install cs
+        $ rm cs<br /></code></pre>
+<p>This will install Coursier, and add it to your PATH</p>
+<p>&nbsp;</p>
+<h2>Windows:</h2>
+<p>1. Start at Scala's website&nbsp;<a href="https://www.scala-lang.org/download/scala3.html" data-gwd-node="true" data-gwd-uuid="ij5a45a2rtb8">here</a></p>
+<p>2. Click on Download Coursier (big red button), or go<a href="https://get-coursier.io/docs/cli-installation" data-gwd-node="true" data-gwd-uuid="i3r8addsy5vn">&nbsp;here</a>.</p>
+<p>3. Type the commands in your terminal from your choice of install package.</p>
+<p>&nbsp; &nbsp; Example, For the native launcher (This needs to be run in cmd.exe not Powershell):</p>
+<pre><code>        &gt; bitsadmin /transfer cs-cli https://git.io/coursier-cli-windows-exe <span class="hljs-string">"%cd%\cs.exe"</span> <br />        &gt; .\cs --<span class="hljs-built_in">help<br /><br /></span></code></pre>
+<h2><strong>If you already have Eclipse installed</strong></h2>
+<p>&nbsp;1. Go to:&nbsp;<a href="https://marketplace.eclipse.org/marketplace-client-intro?mpc_install=421">Eclipse Plugins, Bundles and Products - Eclipse Marketplace</a></p>
+<p>&nbsp;2. Drag and drop the installation file into your open Eclipse.</p>
+<p>&nbsp;3. Then click through the prompts</p>
+<h2> Hello World </h2>
+<p>1. Start Eclipse</p>
+<p>2. Open new Scala Project</p>
+<img src="images/image004.png" alt="Start Scala Project">
+<p>3. Open new Scala Object</p>
+<img src="images/image005.png" alt="Create Scala Object">
+<p>4. Insert the code</p>
+<pre><code>        object Hello {
+    		def main(args: Array[String]) = {
+        		println("Hello, world")
+   		 }
+	}<br /><br /></code></pre>
+<p>5. Click on the green 'Run' button.</p>
+<img src="images/image006.png" alt="Run Program">
+
+<h2> Command Line Arguments in Scale </h2>
+<p>Reading command line arguments is similar to other Java based programming languages</p>
+<p>Command line arguments are stored in an array named "args"</p>
+<p>This is demonstrated by the below program that adds two numbers</p>
+<p>Note that the command line arguments are stored as Strings</p>
+
+<pre><code>	object addTwoNumbers {
+				def main(args: Array[String]) 
+				{
+					println("Adding the first two arguments")
+					var i: Int=args(0).toInt
+					var j: Int=args(1).toInt
+					var sum: Int= i+j
+					println("The sum of two arguments is " + sum)
+				}
+			}<br /><br /></code></pre>
+			
+<h2> Using the API </h2>
+<p>The Scala API (Application Programming Interface) can be found here: <a href="https://www.scala-lang.org/api/current/#package">Scala Standard Library 2.13.7 (scala-lang.org)</a></p>
+<img src="images/image011.png" alt="Create Scala Object">			
+
+</body>
+
+</html>
