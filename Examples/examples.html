@@ -26,7 +26,113 @@
 
 
 <body>
-<p>Examples</p>
+    <h2>Build Instructions</h2>
+      <div class="box1"> 
+        <p>
+          From the directory containing all source files, compile the program with:
+          <p><code>$ scalac NAME_OF_SOURCE.scala</code></p>
+          <p> Then to run the program: </p>
+          <p><code>$ scala NAME_OF_SOURCE</code></p>
+        </p>
+      </div>
+<h2>Examples</h2>
+<div class="box1">
+<p><b>Author: Simon Arca</b></p>
+<pre><code>object Factorial {
+
+def main(args: Array[String]) {
+
+        if (args.length == 1 && args(0).forall(_.isDigit)) {
+        var x:Int = args(0).toInt
+        val fact:Long = factorial(x)
+        println("The factorial of " + x + " is " + fact)
+        }else{
+        println("Please enter a correct value")
+        }
+    }
+def factorial(n: Int): Long ={
+       var factorial = 1
+       for(i <- n to 1 by -1)
+            factorial = factorial*i
+        return factorial
+    }
+}
+ </code></pre>
+</div>
+ <div class="box1">
+<p><b>Author: Simon Arca</b></p>
+<pre><code>object Matrix {
+
+  def main(args: Array[String]) {
+
+    printf("Select lenght of square matrix: ");
+    var lenght:Int = scala.io.StdIn.readInt()
+
+    var Matrix1 = Array.ofDim[Int](lenght, lenght)
+    var Matrix2 = Array.ofDim[Int](lenght, lenght)
+    var Matrix3 = Array.ofDim[Int](lenght, lenght)
+
+    printf("Enter elements of Matrix 1:\n")
+    for (i <- 0 until lenght ){
+        for (j <- 0 to lenght-1){
+             printf("Matrix1(%d)(%d): ", i, j);
+             Matrix1(i)(j) = scala.io.StdIn.readInt();
+        }
+    }
+
+    printf("Matrix 1:\n")
+    for (i <- 0 until lenght){
+          for (j <- 0 until lenght){
+               printf("%d ", Matrix1(i)(j));
+          }
+          println()
+    }
+
+    println()
+
+    printf("Enter elements of Matrix 2:\n")
+    for (i <- 0 until lenght){
+        for (j <- 0 to lenght-1){
+             printf("Matrix2(%d)(%d): ", i, j);
+             Matrix2(i)(j) = scala.io.StdIn.readInt();
+        }
+    }
+    printf("Matrix 2:\n")
+    for (i <- 0 until lenght){
+        for (j <- 0 until lenght){
+           printf("%d ", Matrix2(i)(j));
+        }
+        println()
+
+    }
+
+    println()
+
+    //Multiply Matrix 1 and 2
+     for (a <- 0 until lenght) {
+         for (i <- 0  until lenght) {
+             var sum: Int = 0;
+             for (j <- 0 until lenght) {
+                 sum = sum +  Matrix1(i)(j) * Matrix2(j)(a);
+                 }
+                 Matrix3(i)(a) = sum
+            }
+        }
+
+    printf("Matrix 1 X Matrix 2:\n")
+    for (i <- 0 until lenght){
+        for (j <- 0 until lenght){
+             printf("%d ", Matrix3(i)(j));
+        }
+        println()
+    }
+  }
+}
+ </code></pre>
+~                                                                                                                                                                                                                                                             
+~                       
+</div>
+
 </body>
 
-</html>
+<html>
